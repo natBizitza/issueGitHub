@@ -12,5 +12,9 @@ export class IssueService {
     return of(ISSUES);
   }
 
+  getIssue(id: number): Observable<Issue> {
+    return of(ISSUES.find(issue => issue.id === id));
+  }
+
   constructor() { }
 }

@@ -1,7 +1,9 @@
 <div *ngIf="issue">
 
     <h2>{{issue.title | uppercase}} Details</h2>
-    <div><span>URL: </span>{{issue.url}}</div>
+    <div><span>ID: </span>{{issue.id}}</div>
     <div><span>State: </span>{{issue.state}}</div>
     
-    </div>
+</div>
+
+<button (click)="goBack()">Go back</button>

@@ -1,5 +1,5 @@
 export class Issue {
-    url: string;
+    id: number;
     title: string;
     state: string;
     created_at: string;
