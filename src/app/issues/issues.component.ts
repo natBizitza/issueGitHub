@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Issue } from '../issue';
 import { ISSUES } from '../mock-issues';
+import { IssueService } from '../issue.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { ISSUES } from '../mock-issues';
 })
 export class IssuesComponent implements OnInit {
 
-  issues = ISSUES;
+  issues: Issue[];
 
   issue: Issue = {
     url: 'httpsblabla',
@@ -24,9 +25,15 @@ export class IssuesComponent implements OnInit {
 onSelect(issue: Issue): void {
   this.selectedIssue = issue;
 }
-  constructor() { }
+  constructor(private issueService: IssueService) { }
+
+  getIssues(): void {
+    this.issueService.getIssues()
+        .subscribe(issues => this.issues = issues);
+  }
 
   ngOnInit() {
+    this.getIssues();
   }
 
 }
