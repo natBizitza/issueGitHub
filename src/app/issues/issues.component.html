@@ -6,10 +6,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedIssue">
-
-<h2>{{selectedIssue.title | uppercase}} Details</h2>
-<div><span>URL: </span>{{selectedIssue.url}}</div>
-<div><span>State: </span>{{selectedIssue.state}}</div>
-
-</div>
+<app-is-detail [issue]="selectedIssue"></app-is-detail>
