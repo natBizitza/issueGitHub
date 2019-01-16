@@ -1,0 +1,15 @@
+<h2>My Issues</h2>
+<ul class="issues">
+  <li *ngFor="let issue of issues" (click)="onSelect(issue)"
+   [class.selected]="issue === selectedIssue">
+    <span class="badge">{{issue.url}}</span> {{issue.title}}
+  </li>
+</ul>
+
+<div *ngIf="selectedIssue">
+
+<h2>{{selectedIssue.title | uppercase}} Details</h2>
+<div><span>URL: </span>{{selectedIssue.url}}</div>
+<div><span>State: </span>{{selectedIssue.state}}</div>
+
+</div>
