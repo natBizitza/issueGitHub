@@ -1,10 +1,12 @@
-<h2>My Issues</h2>
+<h2>All Issues</h2>
 <ul class="issues">
-    <li *ngFor="let issue of issues">
+    <li *ngFor="let issue of issues | paginate: { itemsPerPage: 10, currentPage: this.p, totalItems: total }">
       <a routerLink="/detail/{{issue.id}}">
-        <span class="badge">{{issue.id}}</span> {{issue.title}}
+        <span class="badge">{{issue.id}}</span> {{issue.login}}
       </a>
     </li>
   </ul>
 
-<app-is-detail [issue]="selectedIssue"></app-is-detail>
+<!--<app-is-detail [issue]="selectedIssue"></app-is-detail>-->
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+

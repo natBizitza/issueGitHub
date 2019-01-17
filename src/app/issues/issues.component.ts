@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Issue } from '../issue';
-import { ISSUES } from '../mock-issues';
+
 import { IssueService } from '../issue.service';
 
 
@@ -10,6 +10,7 @@ import { IssueService } from '../issue.service';
   styleUrls: ['./issues.component.css']
 })
 export class IssuesComponent implements OnInit {
+  p: number = 1;
   issues: Issue[];
 
   constructor(private issueService: IssueService) { }
