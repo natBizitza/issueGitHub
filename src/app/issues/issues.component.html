@@ -1,4 +1,4 @@
-<h2>All Issues</h2>
+<h2>All Users</h2>
 <ul class="issues">
     <li *ngFor="let issue of issues | paginate: { itemsPerPage: 10, currentPage: this.p, totalItems: total }">
       <a routerLink="/detail/{{issue.id}}">

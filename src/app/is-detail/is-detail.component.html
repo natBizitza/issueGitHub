@@ -1,8 +1,14 @@
 <div *ngIf="issue">
 
-    <h2>{{issue.login | uppercase}} Details</h2>
+    <h2>{{issue.name | uppercase}}'s Details</h2>
     <div><span>ID: </span>{{issue.id}}</div>
+    <div><span>URL: </span>{{issue.url}}</div>
     <div><span>Login: </span>{{issue.login}}</div>
+    <div><span>Name: </span>{{issue.name}}</div>
+    <div><span>Created Account: </span>{{issue.created_at}}</div>
+    <div><span>Updated : </span>{{issue.updated_at}}</div>
+
+
     
 </div>
 

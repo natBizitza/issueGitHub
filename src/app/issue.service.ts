@@ -11,6 +11,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class IssueService {
 
   private isUrl = 'http://api.github.com/users?page=1&per_page=100';  // URL to web api
+  private urlik = 'http://api.github.com/users';  // URL to web api
+
 
   constructor( private http: HttpClient) { }
 
@@ -23,10 +25,10 @@ export class IssueService {
   }
 
     /** GET hero by id. Will 404 if id not found */
-  getIssue(id: number): Observable<Issue> {
-    const url = `${this.isUrl}/${id}`;
+  getIssue(login: string): Observable<Issue> {
+    const url = `${this.urlik}/${login}`;
     return this.http.get<Issue>(url).pipe(
-      catchError(this.handleError<Issue>(`getIssue id=${id}`))
+      catchError(this.handleError<Issue>(`getIssue id=${login}`))
     );
   }
 

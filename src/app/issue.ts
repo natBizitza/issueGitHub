@@ -1,7 +1,8 @@
 export class Issue {
     id: number;
-    title: string;
-    state: string;
+    url: string;
+    login: string;
+    name: string;
     created_at: string;
     updated_at: string;
   }
