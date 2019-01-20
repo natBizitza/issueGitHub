@@ -1,4 +1,6 @@
-# Issues
+# Users
+
+SPA to look for gitHub issues. (!) Currently, users, cause issues API has some service problems.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
