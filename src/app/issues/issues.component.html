@@ -1,6 +1,6 @@
 <h2>All Users</h2>
 <ul class="issues">
-    <li *ngFor="let issue of issues | paginate: { itemsPerPage: 10, currentPage: this.p, totalItems: total }">
+    <li *ngFor="let issue of issues | async | paginate: { id: 'server', itemsPerPage: 10, currentPage: p, totalItems: total }">
       <a routerLink="/detail/{{issue.id}}">
         <span class="badge">{{issue.id}}</span> {{issue.login}}
       </a>
