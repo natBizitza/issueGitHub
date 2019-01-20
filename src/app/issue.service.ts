@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Issue } from './issue';
-import { ISSUES } from './mock-issues';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
